@@ -1,16 +1,10 @@
 $dark-color: #445162;
-$gray-color: #f5f5f5;
-$white-color: #ffffff;
+$gray-color: #ccc;
+$white-color: #f5f5f5;
 
 @font-face {
     font-family: SocialIco;
     src: url("../fonts/Socialico.ttf");
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -18,34 +12,20 @@ $white-color: #ffffff;
     margin: 0 auto;
 }
 
-header,
-article {
-    padding: 50px 50px 60px;
+.pad-50 {
+    padding: 50px 35px;
 }
 
 .bg-dark {
-    background-color: $dark-color;
+    background-color: $dark-color!important;
 }
 
 .bg-white {
-    background-color: $white-color;
+    background-color: $white-color!important;
 }
 
-.right-block {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    padding: 50px 50px 60px;
-    right: 0;
-    top: 0;
-
-    >div {
-        height: 100%;
-    }
-}
-
-.header {
-    position: relative;
+.bg-gray {
+    background-color: $gray-color!important;
 }
 
 .h1 {
@@ -69,7 +49,7 @@ article {
     line-height: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .h1 {
         font-size: 36px;
         text-align: center;
@@ -81,30 +61,31 @@ article {
         width: 100%;
     }
 
-.product-list {
-    margin-top: 50px;
-    list-style: none;
+    .product-list {
+        margin-top: 50px;
+        list-style: none;
 
-    .product-item {
-        position: relative;
-        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 36px;
+        .product-item {
+            position: relative;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
 
-        &:before {
-            position: absolute;
-            display: block;
-            content: '';
-            background: url(../img/check_icon.png) center center no-repeat;
-            width: 24px;
-            height: 100%;
-            left: 0;
-            top: 0;
+            &:before {
+                position: absolute;
+                display: block;
+                content: '';
+                background: url(../img/check_icon.png) center center no-repeat;
+                width: 24px;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            padding-left: 35px;
         }
-
-        padding-left: 35px;
     }
 }
 
@@ -117,7 +98,6 @@ article {
         font-weight: 400;
         line-height: 24px;
         margin-top: 20px;
-        max-width: 50%;
 
         &:first-child {
             margin-top: 30px;
@@ -132,11 +112,6 @@ article {
 }
 
 .pluses {
-    background: $gray-color;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
 
     .h2 {
         width: 100%;
@@ -144,9 +119,14 @@ article {
     }
 
     .plus-item {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
+        background: url(../img/plus_icon.gif) no-repeat left 5px;
+        color: #333333;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-left: 40px;
+        text-align: justify;
+    }
 
     div[class^=col-] {
         margin-top: 35px;
@@ -167,24 +147,22 @@ article {
     }
 }
 
-.scrinshots {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.screenshots {
 
     .h2 {
-        width: 100%;
+        margin-bottom: 30px;
     }
 
-    .scrinshot-item {
-        width: 50%;
+    .screenshot-item {
         margin-top: 30px;
 
-        .image {
+        .screenshot-img {
             float: left;
-            width: 20%;
-            height: 100%;
             margin-right: 15px;
+        }
+
+        .h3 {
+            margin: 0;
         }
 
         p {
@@ -192,7 +170,8 @@ article {
             font-size: 16px;
             font-weight: 400;
             line-height: 24px;
-            padding-right: 15px;
+            text-align: justify;
+            margin: 0;
         }
 
         &:after {
@@ -224,43 +203,49 @@ article {
 }
 
 .reviews {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 
     .h2 {
-        width: 100%;
+        margin-bottom: 30px;
     }
 
     .review-item {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        margin-top: 30px;
+        margin-top: 20px;
 
-        .circle {
-            width: 75px;
-            height: 75px;
+        .review-img {
             border-radius: 50%;
-            background: $dark-color;
             float: left;
         }
 
         blockquote {
-            flex: 1 1;
-            margin-left: 16px;
-            padding: 16px 16px 16px 25px;
-            background: url(../img/bg_review.png) 0 0 no-repeat;
+            float: right;
+            max-width: calc(100% - 110px);
+            position: relative;
+            background: #ebebeb;
+            border-radius: 4px;
+            padding: 16px;
+            margin: 0;
 
             p {
                 color: #333333;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 18px;
+                margin: 0;
             }
 
             .author {
                 color: #989898;
+            }
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: -10px;
+                top: 27px;
+                background: #ebebeb;
+                transform: rotate(45deg);
             }
         }
 
@@ -305,16 +290,11 @@ article {
 }
 
 .buy {
-    padding-left: 145px;
-    padding-right: 145px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
-    flex-wrap: wrap;
 
     .h2 {
-        width: 100%;
+        margin-bottom: 30px;
     }
 
     .buy-item {
@@ -397,23 +377,16 @@ article {
 }
 
 .contacts {
-    padding: 50px 150px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
 
     .h2 {
         color: $white-color;
         font-size: 30px;
         font-weight: 400;
         line-height: 36px;
-        width: 100%;
         margin-bottom: 30px;
     }
 
     .subscribe-form {
-        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;

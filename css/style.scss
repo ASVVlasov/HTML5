@@ -5,7 +5,7 @@ $white-color: #f5f5f5;
 @font-face {
     font-family: SocialIco;
     src: url("../fonts/Socialico.ttf");
-  }
+}
 
 .container {
     max-width: 1280px;
@@ -17,15 +17,15 @@ $white-color: #f5f5f5;
 }
 
 .bg-dark {
-    background-color: $dark-color;
+    background-color: $dark-color!important;
 }
 
 .bg-white {
-    background-color: $white-color;
+    background-color: $white-color!important;
 }
 
 .bg-gray {
-    background-color: $gray-color;
+    background-color: $gray-color!important;
 }
 
 .h1 {
@@ -49,19 +49,21 @@ $white-color: #f5f5f5;
     line-height: 30px;
 }
 
+@media (max-width: 992px) {
+    .h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
 .header {
     .headerProductImg {
         width: 100%;
     }
 
-    .h1 {
-        margin: 0;
-    }
-
     .product-list {
-        margin-top: 28px;
+        margin-top: 50px;
         list-style: none;
-        padding-left: 0;
 
         .product-item {
             position: relative;
@@ -98,14 +100,17 @@ $white-color: #f5f5f5;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
+        margin-top: 20px;
 
         &:first-child {
             margin-bottom: 15px;
         }
     }
 
-    .aboutProductImg {
+    .aboutVideo {
         width: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 }
 
@@ -126,12 +131,22 @@ $white-color: #f5f5f5;
         text-align: justify;
     }
 
-    .col-6 {
+    div[class^=col-] {
         margin-top: 35px;
-    }
 
-    .col-6:nth-of-type(-n+2) {
-        margin-top: 0;
+        &:nth-of-type(-n+2) {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .pluses {
+        div[class^=col-] {
+            &:nth-of-type(2) {
+                margin-top: 35px;
+            }
+        }
     }
 
     .col-6:nth-of-type(odd) {
@@ -179,13 +194,21 @@ $white-color: #f5f5f5;
         &:nth-of-type(-n+2) {
             margin-top: 0;
         }
+    }
+}
 
-        &:nth-of-type(odd) {
-            padding-right: 8px;
-        }
+@media (max-width: 992px) {
+    .screenshots {
+        .screenshot-item {
+            text-align: center;
 
-        &:nth-of-type(even) {
-            padding-left: 8px;
+            &:nth-of-type(2) {
+                margin-top: 30px;
+            }
+
+            .screenshot-img {
+                float: none;
+            }
         }
     }
 }
@@ -236,19 +259,43 @@ $white-color: #f5f5f5;
                 transform: rotate(45deg);
             }
         }
+
         &:after {
             content: '';
             clear: both;
             display: block;
         }
+
         &:nth-of-type(-n+2) {
             margin-top: 0;
         }
-        &:nth-of-type(odd) {
-            padding-right: 8px;
-        }
-        &:nth-of-type(even) {
-            padding-left: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews {
+        .review-item {
+            text-align: center;
+
+            .review-img {
+                float: none;
+            }
+
+            blockquote {
+                margin-top: 15px;
+                float: none;
+                max-width: 100%;
+                text-align: justify;
+
+                &:before {
+                    left: calc(50% - 10px);
+                    top: -10px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -319,6 +366,27 @@ $white-color: #f5f5f5;
     }
 }
 
+@media (max-width: 992px) {
+    .buy {
+        .buy-item {
+            width: 33%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .buy {
+        .buy-item {
+            width: 100%;
+            margin-top: 15px;
+
+            &:nth-child(-n+1) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
 .contacts {
 
     .h2 {
@@ -361,40 +429,53 @@ $white-color: #f5f5f5;
             cursor: pointer;
         }
     }
+
     .skype,
-      .icq,
-      .email,
-      .phone {
+    .icq,
+    .email,
+    .phone {
         padding-left: 30px;
         color: $white-color;
         font-size: 16px;
         font-weight: 400;
         line-height: 28px;
         margin-bottom: 15px;
-      }
+    }
 
-      .skype {
+    .skype {
         background: url("../img/skype_icon.png") no-repeat left center;
-      }
+    }
 
-      .icq {
+    .icq {
         background: url("../img/icq_icon.png") no-repeat left center;
-      }
+    }
 
-      .email {
+    .email {
         background: url("../img/email_icon.png") no-repeat left center;
-      }
+    }
 
-      .phone {
+    .phone {
         background: url("../img/phone_icon.png") no-repeat left center;
-      }
+    }
 
-      .socialIcons {
+    .socialIcons {
         font-family: SocialIco, sans-serif;
         color: $white-color;
         font-size: 60px;
         line-height: 44px;
-      }
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts {
+        .contacts-list {
+            margin-top: 30px;
+        }
+
+        .socialIcons {
+            font-size: 50px;
+        }
+    }
 }
 
 .copy {

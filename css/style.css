@@ -61,8 +61,15 @@ article {
   line-height: 30px;
 }
 
-.text-center {
-  text-align: center;
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.header .headerProductImg {
+  width: 100%;
 }
 
 .product-list {
@@ -108,8 +115,12 @@ article {
   margin-top: 30px;
 }
 
-.about .right-block {
-  width: 45%;
+.about .aboutVideo {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .pluses {
@@ -157,24 +168,25 @@ article {
   margin: 0 0 30px 10px;
 }
 
-.scrinshots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.pluses div[class^=col-] {
+  margin-top: 35px;
 }
 
-.scrinshots .h2 {
-  width: 100%;
+.pluses div[class^=col-]:nth-of-type(-n+2) {
+  margin-top: 0;
 }
 
-.scrinshots .scrinshot-item {
-  width: 50%;
+@media (max-width: 992px) {
+  .pluses div[class^=col-]:nth-of-type(2) {
+    margin-top: 35px;
+  }
+}
+
+.screenshots .h2 {
+  margin-bottom: 30px;
+}
+
+.screenshots .screenshot-item {
   margin-top: 30px;
 }
 
@@ -209,6 +221,18 @@ article {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  .screenshots .screenshot-item {
+    text-align: center;
+  }
+  .screenshots .screenshot-item:nth-of-type(2) {
+    margin-top: 30px;
+  }
+  .screenshots .screenshot-item .screenshot-img {
+    float: none;
+  }
 }
 
 .reviews .h2 {
@@ -253,6 +277,50 @@ article {
 
 .reviews .review-item blockquote .author {
   color: #989898;
+}
+
+.reviews .review-item blockquote:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -10px;
+  top: 27px;
+  background: #ebebeb;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.reviews .review-item:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.reviews .review-item:nth-of-type(-n+2) {
+  margin-top: 0;
+}
+
+@media (max-width: 992px) {
+  .reviews .review-item {
+    text-align: center;
+  }
+  .reviews .review-item .review-img {
+    float: none;
+  }
+  .reviews .review-item blockquote {
+    margin-top: 15px;
+    float: none;
+    max-width: 100%;
+    text-align: justify;
+  }
+  .reviews .review-item blockquote:before {
+    left: calc(50% - 10px);
+    top: -10px;
+  }
+  .reviews .review-item:nth-of-type(2) {
+    margin-top: 20px;
+  }
 }
 
 .buy {
@@ -336,20 +404,20 @@ article {
   height: 40px;
 }
 
-.contacts {
-  padding: 50px 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (max-width: 992px) {
+  .buy .buy-item {
+    width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .buy .buy-item {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .buy .buy-item:nth-child(-n+1) {
+    margin-top: 0;
+  }
 }
 
 .contacts .h2 {
@@ -400,5 +468,59 @@ article {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.contacts .skype,
+.contacts .icq,
+.contacts .email,
+.contacts .phone {
+  padding-left: 30px;
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.contacts .skype {
+  background: url("../img/skype_icon.png") no-repeat left center;
+}
+
+.contacts .icq {
+  background: url("../img/icq_icon.png") no-repeat left center;
+}
+
+.contacts .email {
+  background: url("../img/email_icon.png") no-repeat left center;
+}
+
+.contacts .phone {
+  background: url("../img/phone_icon.png") no-repeat left center;
+}
+
+.contacts .socialIcons {
+  font-family: SocialIco, sans-serif;
+  color: #f5f5f5;
+  font-size: 60px;
+  line-height: 44px;
+}
+
+@media (max-width: 992px) {
+  .contacts .contacts-list {
+    margin-top: 30px;
+  }
+  .contacts .socialIcons {
+    font-size: 50px;
+  }
+}
+
+.copy {
+  height: 26px;
+  text-align: center;
+  color: #445161;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 26px;
 }
 /*# sourceMappingURL=style.css.map */

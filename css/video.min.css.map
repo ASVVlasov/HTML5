@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,AAAC,CACP,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,CAAC,CACV,IAAI,CAAE,CAAC,CACP,GAAG,CAAE,CAAC,CACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,KAAK,CACb,UAAU,CAAE,KAAK,CACjB,eAAe,CAAE,aAAa,CACjC,AAED,AAAA,UAAU,AAAC,CACP,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,GAAG,CACf",
+    "sources": [
+        "video.scss"
+    ],
+    "names": [],
+    "file": "video.min.css"
+}

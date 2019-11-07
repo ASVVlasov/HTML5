@@ -59,7 +59,6 @@
 .header .product-list {
   margin-top: 50px;
   list-style: none;
-  padding-left: 0;
 }
 
 .header .product-list .product-item {
@@ -83,8 +82,8 @@
   top: 0;
 }
 
-.about .h2 {
-  margin-bottom: 30px;
+.about {
+  position: relative;
 }
 
 .about p {
@@ -96,7 +95,7 @@
 }
 
 .about p:first-child {
-  margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 .about .aboutVideo {

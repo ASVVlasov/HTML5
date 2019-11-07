@@ -90,10 +90,7 @@ $white-color: #f5f5f5;
 }
 
 .about {
-
-    .h2 {
-        margin-bottom: 30px;
-    }
+    position: relative;
 
     p {
         color: #333333;
@@ -103,7 +100,7 @@ $white-color: #f5f5f5;
         margin-top: 20px;
 
         &:first-child {
-            margin-bottom: 15px;
+            margin-top: 30px;
         }
     }
 
@@ -147,14 +144,6 @@ $white-color: #f5f5f5;
                 margin-top: 35px;
             }
         }
-    }
-
-    .col-6:nth-of-type(odd) {
-        padding-right: 8px;
-    }
-
-    .col-6:nth-of-type(even) {
-        padding-left: 8px;
     }
 }
 

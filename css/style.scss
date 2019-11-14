@@ -587,6 +587,12 @@ p {
         .treatment-block {
             grid-template-columns: none;
         }
+        .treatment-header-1,
+        .treatment-header-2 {
+            .h2 {
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -628,6 +634,12 @@ p {
 @media (max-width: 992px) {
     .gallery-content {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-content {
+        grid-template-columns: none;
     }
 }
 

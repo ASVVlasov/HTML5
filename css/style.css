@@ -607,6 +607,10 @@ p {
     -ms-grid-columns: none;
         grid-template-columns: none;
   }
+  .treatment-content .treatment-header-1 .h2,
+  .treatment-content .treatment-header-2 .h2 {
+    text-align: center;
+  }
 }
 
 .gallery-bg {
@@ -650,6 +654,13 @@ p {
   .gallery-content {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-content {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
   }
 }
 

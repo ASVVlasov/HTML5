@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+            padding: 10% 0;
+        }
+        .container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        .container a {
+            text-decoration: none;
+            color: #ccc;
+            transition: .5s ease all;
+        }
+        .container a:hover {
+            color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <a href="video/index.html">Video</a>
-        <a href="video/video.html">Video2</a>
-        <a href="medical/index.html">Medical</a>
-        <a href="concomitant/index.html">Concomitant</a>
+        <a href="video/video.html">Video Template</a>
+        <a href="medical/index.html">Medical Template</a>
+        <a href="concomitant/index.html">Concomitant Template</a>
     </div>
 </body>
 </html>
